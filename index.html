@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>榖飼牛點餐價格表</title>
+    <style>
+        h1,
+        h2 {
+            font-weight: bolder;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: blue;
+        }
+        
+        h2 {
+            font-size: 28px;
+            color: red;
+        }
+        
+        table {
+            margin: auto;
+            border: 1px dotted gray;
+        }
+        
+        #tableCaption {
+            border-style: dashed;
+            border-width: 1px;
+        }
+        
+        td {
+            border: 1px dotted green;
+            font-size: 18px;
+            text-align: center;
+            color: green;
+            padding: 10px
+        }
+        
+        .content {
+            color: red;
+            font-family: Arial;
+            font-size: 18px;
+        }
+        
+        #tableTitle {
+            border: 1px dotted purple;
+            font-size: 18px;
+            color: purple;
+            text-align: center
+        }
+        
+        .nothing {
+            border: 0px;
+        }
+    </style>
+    <script language="Javascript">
+        var a = 50,
+            b = 100,
+            c = 150,
+            d = 200,
+            e = 250;
+        document.write("<table>");
+        document.write('<caption><h1>榖飼牛點餐價格表<br><h2>折扣內容:套餐4及套餐5全面打5折</caption>');
+        document.write("<tr>");
+        document.write("<td class=nothing>");
+        document.write('<td id="tableTitle">套餐 1<br>' + a + "元</td>");
+        document.write('<td id="tableTitle">套餐 2<br>' + b + "元</td>");
+        document.write('<td id="tableTitle">套餐 3<br>' + c + "元</td>");
+        document.write('<td id="tableTitle">套餐 4<br>' + d + '元<br><span class="content">特價:' + d / 2 + '</td>');
+        document.write('<td id="tableTitle">套餐 5<br>' + e + '元<br><span class="content">特價:' + e / 2 + '</td>');
+        document.write("</tr>");
+        for (var x = 1; x < 8; x++) {
+            document.write("<tr>");
+            document.write('<td id="tableTitle">' + x + "</td><br>");
+            document.write("<td>" + a + "</td>");
+            document.write("<td>" + b + "</td>");
+            document.write("<td>" + c + "</td>");
+            document.write('<td class="content">原價:' + d + '<br>折扣後:' + d / 2 + '</td>');
+            document.write('<td class="content">原價:' + e + '<br>折扣後:' + e / 2 + '</td>');
+            a = a + 50;
+            b = b + 100;
+            c = c + 150;
+            d = d + 200;
+            e = e + 250;
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
